@@ -1,17 +1,18 @@
-<div class="groceries-container"> 
-<h1>Karen's Grocery List</h1>
-  <h2>KK's Groceries - TO BUY</h2>
-
-     <div class="groceries"> 
+<div class="groceries-container">
+<header>
+  <h1>Karen's Grocery List</h1>
+  <p class="grocery-list">KK's Groceries - WHAT I NEED TO BUY :)</p>
+</header>
+     <div class="groceries">
       <ul>
     <% @groceries.each do |groceryitem| %>
-     
+
       <li><%= groceryitem.item %></li>
-    
-          <%= link_to 'Edit',  edit_grocery_path(groceryitem), :data => { :colorbox => true } %>
-          <%= link_to 'Delete list item', groceryitem, method: :delete, data: { confirm: "Are you sure you want to delete this item?"  } %>
-    <% end %> 
-      </ul>
-<%= link_to 'Add New Grocery Item', new_grocery_path %>
+
+          <%= link_to 'Edit',  edit_grocery_path(groceryitem), :data => { :colorbox => true, }, :class => "edit" %>
+          <%= link_to 'Delete list item', groceryitem, method: :delete, data: { confirm: "Are you sure you want to delete this item?"  }, :class => "edit" %><br />
+    <% end %>
+       </ul>
+<%= link_to 'Add New Grocery Item', new_grocery_path, :class => "new-item" %>
  </div>
 </div>
