@@ -1,0 +1,19 @@
+// Place all the styles related to the groceries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.groceries-container {
+	margin: auto;
+	h1 {
+	color: green;
+	}
+	h2 {
+	color: blue;
+	}
+	div.groceries {
+	float: left;
+	}
+}
+div.links {
+	display: none;
+}
